@@ -1,0 +1,20 @@
+<table class="table mt-3">
+    <thead class="table-dark">
+        <tr>
+            <th>Pet Id</th>
+            <th>Pet Name</th>
+            <th>Name</th>
+            <th>Contact</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of adoptions.results">
+            <td>{{item.petId}}</td>
+            <td>{{item.petName}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.contact}}</td>
+            <td><button class="btn btn-success" (click)="onDelete(item._id)">Approve</button></td>
+        </tr>
+    </tbody>
+</table>
